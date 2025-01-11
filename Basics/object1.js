@@ -1,5 +1,5 @@
 // Displaying JS object properties: they can be displayed in 4 ways: 
-// i) using 'objectName.propertyName', ii) using loop, iii) using 'object.values()', iv) using "JSON.stringify()"
+// i) using 'objectName.propertyName', ii) using loop, iii) using 'Object.values()', iv) using "JSON.stringify()"
 const person = {
   name : "Bimal", 
   age: 23,
@@ -14,7 +14,7 @@ let text = "";
 for(let x in person){
   text += person[x] + " ";
 };
-console.log(text);  // only displays the properties, not the key. i.e Bimal 23 Kathmandu
+console.log(text);  // only displays the values, not the key. i.e Bimal 23 Kathmandu
 
 // Note: You must use person[x] in the loop. person.x will not work (Because x is the loop variable).
 
@@ -37,8 +37,55 @@ console.log(text1);
  
 // stringify Object:
 let myString = JSON.stringify(person);
-console.log(myString);
+console.log(`Stringified JS object: ${myString}`);
+
+// Object constructor function: Sometimes we need to create many objects of the same type. To create an object type we use an object constructor function.
+// It is considered good practice to name constructor functions with an upper-case first letter.
+function Person(first, last, age, eye){
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = "Brown";  // A value given to a property will be a default value for all objects created by the constructor:
+  this.fullName = function(){
+    return this.firstName + " " + this.lastName;  // Constructor function method 
+  };
+}
+// Note: In the constructor function, this has no value. The value of this will become the new object when a new object is created.
+// Now we can use new Person() to create many new Person objects:Now we can use new Person() to create many new Person objects:
+const mySister = new Person("Rohini", "Paudel", 31);
+const mySelf = new Person("Bimal", "Paudel", 23);
+const myBrother = new Person("Nirmal", "Paudel", 21);
+console.log(mySister);
+console.log(`My sister's full name is ${mySister.fullName()}.`);   // accessing the object function method.
 
 
+// Built-in JavaScript Constructors
+// JavaScript has built-in constructors for all native objects:
+//new Object()   # A new Object object
+// new Array()    # A new Array objects
+// new Map()      # A new Map object
+// new Set()      # A new Set object
+// new Date()     # A new Date object
+// new RegExp()   # A new RegExp object
+// new Function() # A new Function object
 
 
+// NOTE: The Math() object is not in the list. Math is a global object. The new keyword cannot be used on Math.
+
+
+// Use object literals {} instead of new Object().
+
+// Use array literals [] instead of new Array().
+
+// Use pattern literals /()/ instead of new RegExp().
+
+// Use function expressions () {} instead of new Function().
+
+ // "";           # primitive string
+// 0;            # primitive number
+// false;        # primitive boolean
+
+// {};           # object object
+// [];           # array object
+// /()/          # regexp object
+// function(){}; # function
