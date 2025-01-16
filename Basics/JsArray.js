@@ -4,7 +4,7 @@ const cars = ["Tesla", "BYD",    // array declared using array literal.
 cars[4] = "TATA";
 cars[1] = "Honda";  // changing the first array element;
 
-const names = new Array("Bimal", "Rohini", "Nirmal", "Matrika");    // this way is less commonly used, for simplicity readablity and execution speed use array literal, this can also produce some unexpected results.
+const names = new Array("Bimal", "Rohini", "Nirmal", "Matrika");    // this way is less commonly used, for simplicity readablity and execution speed use array literal, this (array declared using 'new' keyword) can also produce some unexpected results.
 console.log(`Array elements in 'cars': ${cars}`);  // outputs may look different while displaying it with string (may be it implicitly converts array to string.)
 console.log(`Array elements in 'names':`);
 console.log(names);   // [ 'Bimal', 'Rohini', 'Nirmal', 'Matrika' ]
@@ -59,6 +59,37 @@ names[8] = "Indira";  // creates 'undefined' holes in names since names only had
 
 // the 'typeof()' operator also returns array as an object so to identify the array we use 'Array.isArray()' method or 'instanceOf Array'
 console.log(`Is names array or object?: ${Array.isArray(names)}`);   // true
-console.log(`Is names array or object?: ${names instanceOf Array}`);  
+console.log(`Is names array or object?: ${names instanceof Array}`);  // true
+
+// Nested Arrays and Objects: Values in objects can be arrays, and values in arrays can be objects:
+const myObj = {
+  name: "John",
+  age: 30,
+  cars: [
+    {name:"Ford", models:["Fiesta", "Focus", "Mustang"]},
+    {name:"BMW", models:["320", "X3", "X5"]},
+    {name:"Fiat", models:["500", "Panda"]}
+  ]
+} 
+
+
+// To access arrays inside arrays, use a for-in loop for each array:
+/*
+for (let i in myObj.cars) {
+  x += "<h1>" + myObj.cars[i].name + "</h1>";
+  for (let j in myObj.cars[i].models) {
+    x += myObj.cars[i].models[j];
+  }
+}
+*/
+
+
+
+
+
+
+
+
+
 
 
