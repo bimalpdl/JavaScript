@@ -7,6 +7,7 @@
 // Number types:
 // All JavaScript numbers are stored as decimal numbers (floating point).Javascript numbers are always one type: i.e double (64-bit floating point).
 // Numbers can be written with, or without decimals:
+// typeof() operator is used to check the data type of any JS variables.
 let num = 5, num1 = 10.67;
 console.log(`${num}\n${num1}`);
 
@@ -68,10 +69,33 @@ console.log(typeof(a)); // string
 let car = "";  // The value is "", the typeof is "string" 
 console.log(car);  // string 
 
+// NOTE: type of 'null' is object.
+let randomVar = null;
+console.log(`type of 'null' assigned variable is ${typeof(randomVar)}`);
+
+// create an object
+let person1 = {name: "Bimal", age: 23};
+console.log(`Type of person: ${typeof(person1)}`);  // object
+
+// set the value of person1 as 'null'
+person1 = null;  // the value of person1 is null but the type is still an objcet.
+console.log(`Type of person after assigning 'null': ${typeof(person1)}`);  // object
+
+// NOTE: you can empty JS variables or objects by assigngin them 'null' or 'undefined'.
+
+// array, object, Set() and Map() are also object types.
 
 
+// An empty value has nothing to do with undefined. An empty string has both a legal value and a type.
+let cats = "";
+console.log(`Type of variable 'cats = ""; ' is: ${typeof(cats)}`);
 
-
+// Difference Between Undefined and Null
+// undefined and null are equal in value but different in type:
+console.log(`typeof 'undefined': ${typeof(undefined)}`);  // undefined 
+console.log(`typeof 'null': ${typeof(null)}`);  // object
+console.log(`null === undefined? : ${null === undefined}`);  // false
+console.log(`null == undefined? : ${null == undefined}`);   // true
 
 
 
