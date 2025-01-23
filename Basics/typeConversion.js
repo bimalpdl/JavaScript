@@ -29,3 +29,14 @@ String(true); // "true"
 "5" + 2     // returns "52"      because 2 is converted to "2"
 "5" - 2     // returns 3         because "5" is converted to 5
 "5" * "2"   // returns 10        because "5" and "2" are converted to 5 and 2 
+
+// Boolean type conversion:
+// String to boolean:
+let text = "";
+Boolean(text);    // returns false since there's nothing in the text (empty string), empty string is converted to 'false'.
+
+text = "Hello";
+Boolean(text);   // non-empty strings are evaluated as true.
+
+// string to boolean conversion is used to check whether user typed something or not, if boolena returns 'fasle' then given string (user input) is empty, otherwise user has typed sth.
+
