@@ -1,4 +1,3 @@
-// TODO: the last code is producing bug in output, fix it.
 
 // JS classes are templates for JS objects.
 // Use the keyword class to create a class. Always add a method named constructor():
@@ -24,21 +23,19 @@ const p2 = new Person("Rohini", 31);
 
 // class method:
 // Class methods are created with the same syntax as object methods. Always add a constructor() method. Then add any numbers of method.
-
-class Car {   // class declaration
-  constructor(name, manufacturingYear) {    // constructor declaration
+class Car{
+  constructor(name, year) {
     this.name = name;
-    this.manufacturingYear = manufacturingYear;
+    this.year = year;
+
   }
+  age()  { // class method; note that it doesn't start with 'function' keyword as the normal functions/ methods. 
 
- calculateAge() {   // class method
-  const date = new Date();
-  return date.getFullYear() - this.year;
-
+    const date = new Date();
+    return date.getFullYear() - this.year;
+  }
 }
-}
-
 const c1 = new Car("Tesla", 2015);  // declaring an object c1 of class Car.
-console.log(`The car is ${c1.calculateAge()} years old`);   // The car is  NaN years old.
+console.log(`The car is ${c1.age()} years old`);   // The car is  NaN years old.
 
 
