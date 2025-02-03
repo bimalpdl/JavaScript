@@ -3,7 +3,7 @@
 
 class Car {    // parent class 
   constructor(brand) {  
-    this.carName = brand
+    this.carName = brand;
   }
 
   showDetails() {     // method inside a class, NOTE: we don't need to use 'function' keyword here.

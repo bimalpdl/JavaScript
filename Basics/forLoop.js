@@ -42,7 +42,7 @@ console.log(text1);
 // It is better to use a for loop, a for of loop, or Array.forEach() when the order is important.
 
 
-// for of loop: The JavaScript for of statement loops through the values of an iterable object.
+// for of loop: The JavaScript 'for of' statement loops through the values of an iterable object.
 // It lets you loop over iterable data structures such as Arrays, Strings, Maps, NodeLists, and more:
 // syntax: for(variable of iterable) {}
 // variable - For every iteration the value of the next property is assigned to the variable. Variable can be declared with const, let, or var.

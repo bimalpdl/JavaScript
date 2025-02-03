@@ -142,14 +142,44 @@ let greet = myInfo.greet();
 console.log(greet);  // Hello Bimal, how are you doing today?
 
 
+const Person5 = {
+  firstName : "Bimal", 
+  lastName : "Paudel",
+  // fullName : function() {}  # this is the traditinal way of using function as value for a key in object,  but in ES6, there is a better approach to do so:
+  // we simply declare a function without 'function' keyword, the functionName will be automatically treated as key of the object:
+  fullName() {   // fullName is the key here
+    return `${Person5.firstName} ${Person5.lastName}`;
+  }
+}
+
+console.log(Person5.fullName());   // Bimal Paudel 
 
 
+// getter and setter: they are used to read or write property values of the object (also can be used in class).
+// getter are used to access the properties while setters are used to change or mutate the properties
+// the values in object Person5 is readonly, but we can make them modifiable using getters and setters:
+// also using getters and setters we can use the functions of object as their properties while accessing them, ie:
+// rather than doing 'Person.fullName()', we can simply do 'Person.fullName'.
 
+const Person6 = {
+  fName : "John",
+  lName : "Doe",
+  get fullName() {  // 'get' keyword (for getter) is used to access the property 
+    return `${Person6.fName} ${Person6.lName}`;
+  },
 
+  // to modify the property, use 'set' keyword:
+  set fullName(updatedName) {
+    const parts = updatedName.split(" ");    // split the string into an array based on whitespace and stores to parts array variable.
+    this.fName = parts[0];
+    this.lName = parts[1];
 
+  }
+}
 
-
-
+console.log(Person6.fullName);   // note that we've accessed the fullName function without '()';
+Person6.fullName = "Matrika Paudel";  // updates the fullName 
+console.log(Person6.fullName);
 
 
 
