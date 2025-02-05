@@ -36,9 +36,11 @@ add(Number(firstNum), secondNum);
    console.log(`Hello ${name}! How are you doing today?`);
  }
 
-function fullNameGreet(firstName, lastName, myCallBack) {
+function fullNameGreet(firstName, lastName, myCallBack) {   
+// callback function 'greet' is also given a new parameter name 'myCallBack'
   let fullName = `${firstName} ${lastName}`;
   myCallBack(fullName);
+  // note here we've used the parameter name to invoke the 'greet()' callback function
 }
 
 let fName = prompt("Enter your first name: ");
