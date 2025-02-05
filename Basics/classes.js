@@ -9,6 +9,8 @@
 // The constructor method is a special method: It has to have the exact name "constructor"
 //   It is executed automatically when a new object is created. It is used to initialize object properties
 // If you do not define a constructor method, JavaScript will add an empty constructor method. 
+// Unlike functions, and other JavaScript declarations, class declarations are not hoisted.
+// That means that you must declare a class before you can use it:
 class Person {    // class Person contains two properties: name and age.
   constructor(name, age) {
     this.name = name;
