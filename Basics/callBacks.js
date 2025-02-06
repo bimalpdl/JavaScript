@@ -1,5 +1,6 @@
+//   TODO:  Last solution of this file needs to be corrected
 // JavaScript functions are executed in the sequence they are called. Not in the sequence they are defined.
-//
+
 const prompt = require("prompt-sync")();
 function displayResult(value) {   // first function definition; it simply displays the value that is passed as parameter
   console.log(`The value is ${value}`);
@@ -21,7 +22,7 @@ function add(num1, num2) {
   displayResult(result);     // invoking another function form one function body;
 }
 
-let firstNum = prompt("Enter first number: ");
+let firstNum = prompt("Enter Afirst number: ");
 let secondNum = Number(prompt("Enter second number: "));
 add(Number(firstNum), secondNum);
 
@@ -50,3 +51,25 @@ fullNameGreet(fName, lName, greet);
 // In the example above, 'greet' is called callback function which is passed as an argument to the function fullNameGreet().
 
 // NOTE: When you pass a function as an argument, remember not to use parenthesis. ie. 'fullNameGreet(fName, lName, greet())' is invalid.
+
+
+
+
+// list out only the positive from a group.
+const nums = [10, -2, 8, 0 , -90, 84, -9849];
+
+
+const positiveNumbers = removeNegative((nums, (nums) => x >= 0));
+
+function removeNegative(nums, callBack) {
+  const myArray = [];
+  for(let i of nums) {
+    if(callBack(i)) {
+      myArray.push(i);
+    }
+  }
+  return myArray;
+
+
+
+}
