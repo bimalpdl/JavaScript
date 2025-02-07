@@ -1,4 +1,3 @@
-//   TODO:  Last solution of this file needs to be corrected
 // JavaScript functions are executed in the sequence they are called. Not in the sequence they are defined.
 
 const prompt = require("prompt-sync")();
@@ -56,20 +55,21 @@ fullNameGreet(fName, lName, greet);
 
 
 // list out only the positive from a group.
-const nums = [10, -2, 8, 0 , -90, 84, -9849];
+const wholeNums = [93, 20, -83, 12, 94, -5, 7, -98, 26 ];    
 
+const positiveNumbers1 = removeNegative(wholeNums, (x) => x >=  0);      // anonymous callback function is passed as parameter.
 
-const positiveNumbers = removeNegative((nums, (nums) => x >= 0));
+function removeNegative(numbers, callBack) {
+  const resultArray = [];
 
-function removeNegative(nums, callBack) {
-  const myArray = [];
-  for(let i of nums) {
-    if(callBack(i)) {
-      myArray.push(i);
+  for(const number of numbers) {
+    if(callBack(number)) {// calls the anonymous callback funtion that returns even numbers.
+      resultArray.push(number);    // even number is pushed to resultArray.
     }
   }
-  return myArray;
-
-
-
+  return resultArray;
 }
+
+console.log(`Elements of array wholeNums:  ${wholeNums}`);
+
+console.log(`After filtering the negative numbers: ${positiveNumbers1}`);

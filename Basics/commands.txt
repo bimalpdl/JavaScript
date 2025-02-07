@@ -1,7 +1,0 @@
-npm i prompt-sync     => library to ask for user input in terminal
-after installing, we'll need to put :
-"let prompt = require('prompt-sync')();"    // you can use any word as variable other than the reserved for JS ones.
-on top of the file you're going to use the 'prompt()' mehtod,  then you can use prompt() like this:
-
-let age = prompt("Enter your age: ");    // prompts for user input age
-the input got from promt is always string.
