@@ -50,4 +50,15 @@ myPromise.then(
 );
 
 
+// JS promise example (waiting for a timeout):
+let myPromise1 = new Promise(function(mySuccess, myFailure) {     // myPromise object that accepts two callback functions i.e mySuccess and myFailure.
+setTimeout(() => mySuccess("Hello there, I am waiting for timeout promise example."), 3000);    // invoking the mySuccess callback function.
+});
 
+myPromise1.then(function(returnValue) {      // consumer funtion 
+  console.log(returnValue);
+},
+function(errorMessage) {
+  console.log(errorMessage);
+}
+)
