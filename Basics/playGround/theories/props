@@ -1,0 +1,36 @@
+'props' stands for properties and are similar to function arguments.
+'props' keyword is used in the component signature i.e
+
+
+// inside App.js
+function App(props) {    // props keyword is used here
+  return (  
+<h1>Hello {props.name}</h1>     // the argument is accessed using dot notation similar to how we access value of object. ie. props.argumentName inside {}
+  );
+};
+
+
+// the value of props is passed similar to the HTML attribute:
+
+// inside index.js
+import App from "./App.js";
+ReactDOM.createRoot(<containerHere>).render(<App name="Bimal" />);    // here we've used name="Bimal" to pass the props / properties.
+
+
+React props can be simple type (such as string, number) and complex types (object, function, arrays).
+Props helps to make flexible dynamic content.
+Props are used to sending data between components.
+
+The component sending the props data is called parent and the component receiving the data is called child.
+Parent component can send data to child component but child component can't send data to parent component (it is uni-directional).
+In the example above, index.js is parent component and App.js is child component.
+A parent component can send same data to many child components.
+
+NOTE: child component can't send back data to the parent component, only the parent component can send data to one or more child components.
+a child function receiving a props can't modify the props value ie. for the example above,
+
+function App(props) {
+  return (
+{props.name = "Rohini"}    // this'll throw an error since we're trying to modify the props value
+  );
+};

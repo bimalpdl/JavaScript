@@ -1,4 +1,3 @@
-// TODO: last line of code is broken fix it
 // The JavaScript spread operator (...) allows us to quickly copy all or part of an existing array or object into another array or object.
 const firstArray = [1, 2, 3, 4, 5];
 const secondArray = [5, 6, 7, 8];
@@ -29,4 +28,18 @@ const updatedMyVehicle = {
 }
  // Notice the properties that did not match were combined, but the property that did match, color, was overwritten by the last object that was passed, updateMyVehicle. The resulting color is now yellow.
 const myUpdatedVehicle = {... myVehicle, ...updatedMyVehicle};
-console.log(`myVehicle: ${myVehicle}, updatedMyVehicle: ${updatedMyVehicle}, myUpdatedVehicle: ${myUpdatedVehicle}.`);
+// console.log(`myVehicle: ${myVehicle}, updatedMyVehicle: ${updatedMyVehicle}, myUpdatedVehicle: ${myUpdatedVehicle}.`);
+console.log("My vehicle: ");
+for (let key in myVehicle) {
+  console.log(`${key} : ${myVehicle[key]}`);
+}
+console.log();
+console.log("updatedMyVehicle: ");
+for (let key in updatedMyVehicle) {
+  console.log(`${key}: ${updatedMyVehicle[key]}`);
+}
+console.log();
+console.log("myUpdatedVehicle using spread operator: ");
+for (let key in myUpdatedVehicle) {
+  console.log(`${key}: ${myUpdatedVehicle[key]}`);
+}

@@ -6,8 +6,8 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App name="Bimal Paudel" />   // props name="Bimal Paudel" is used here, since it is send the props this component is called parent component.
+  <React.StrictMode>      {/* This is how we write comment in JSX inside curly braces and using multiline comment format */}
+    <App name="Bimal Paudel" />   {/* props name="Bimal Paudel" is used here, since it is send the props this component is called parent component.*/}
   </React.StrictMode>
 );
 
