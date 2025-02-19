@@ -22,5 +22,12 @@ function Conditional(props) {
       return <IsMinor />;
     }
       return <IsAdult />;
+    {/* we can use ternary operater as well, but since it's an js expression, we'll need to wrap it around
+      curly braces{}, like : 
+      
+    {isMinor? <IsMinor /> : <IsAdult />}
+
+
+      */}
 }
 export default Conditional;

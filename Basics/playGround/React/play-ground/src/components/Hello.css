@@ -1,0 +1,17 @@
+#user-name {
+    color: red;
+}
+
+.user-container {
+    background-color: rgb(36, 30, 30);
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 55px;
+
+}
+
+#desc {
+    color: white;
+}

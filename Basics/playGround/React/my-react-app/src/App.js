@@ -19,7 +19,7 @@ function App(props) {     // props is declared here using 'props' keyword
      <Footer name="Bimal" />  {/* passing name argument for Footer component (using HTML attribute like syntax) */}
     <h1> Hello {props.name}! How are you doing today? </h1>  {/* props.ArgumentName is used here to access props argument (passed from parent component).*/}
     <Promo percentage="75" date="25"/>  {/* We can pass multiple arguments like this. */}
-
+    <App />
     <Nav name="Bimal" mail="info@bimalpdl.com" contact="1234567890"/>
     <Conditional value={true} />
   </>
