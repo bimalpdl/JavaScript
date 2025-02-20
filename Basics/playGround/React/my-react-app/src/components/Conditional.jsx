@@ -26,6 +26,7 @@ function Conditional(props) {
       curly braces{}, like : 
       
     {isMinor? <IsMinor /> : <IsAdult />}
+    
 
 
       */}

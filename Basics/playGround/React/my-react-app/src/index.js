@@ -5,7 +5,8 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 // import Conditional from './components/Conditional';
 // import Styling from './components/Styling';
-import {Arrow, Arrow1} from './components/Arrow';
+// import {Arrow, Arrow1} from './components/Arrow';
+import Nav from './components/Nav';
 
 const root = ReactDOM.createRoot(document.getElementById('conditional'));
 root.render(
@@ -15,11 +16,15 @@ root.render(
 
 <Conditional isMinor={false}/> 
 */}
-{/*  <Styling />
-*/}
+{/*  
+<Styling />
 
 <Arrow name="Bimal Paudel" />
 <Arrow1 first="Bimal" second="Rohini" third="Matrika"/>
+*/}
+
+<Nav />
+
 
   </React.StrictMode>
 );
