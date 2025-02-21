@@ -31,4 +31,14 @@ function Conditional(props) {
 
       */}
 }
-export default Conditional;
+
+function RandomNumber () {
+  return (
+    <>
+    <p>Random number between 1 and 10 = <span style={{color:"Red", fontSize:"larger", fontWeight:"800"}}>{Math.floor(Math.random()* 10 +1)}</span></p>   
+    {/*  Function invocation is an expression because every expression returns a value, and function invocation will always return a value, even when that return value is undefined. Therefore function needs to be invoked inside curly braces {} */}
+    <p>Refresh the page to get another random number.</p>
+    </>
+  );
+}
+export {Conditional, RandomNumber};
