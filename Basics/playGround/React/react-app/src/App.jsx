@@ -1,14 +1,11 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-
+import ReactHook from './components/ReactHook';
+import OnClickExpression from './components/OnClickExpression';
 function App() {
-  const [count, setCount] = useState(1);   {/* useState hook and destructuring is used here. */}
-  return(
+  return (
     <>
-    <h1>Hello There!!</h1>
-    <button onClick={() => setCount((count) => count + 5 )} className='counterButton'>The here to increment the count by 5:  {count}</button>
+    {/* <ReactHook /> */}
+<OnClickExpression />
     </>
   );
 }
