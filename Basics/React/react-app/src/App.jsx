@@ -4,6 +4,7 @@ import ReactHook from './components/ReactHook';
 import OnClickExpression from './components/OnClickExpression';
 import PropsChild, {Entity} from './components/PropsChild';
 import {Parent, Child} from './components/StateLifting';
+import {Room} from './components/ArrayMap';
 
 function App() {
 	return (
@@ -27,6 +28,7 @@ function App() {
 			<Child />
 </>
 	} />
+	<Route path="room" element={<Room />} />
 
 		</Routes>
 		</Router>
