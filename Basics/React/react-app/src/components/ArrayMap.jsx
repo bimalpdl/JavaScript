@@ -20,4 +20,36 @@ function Individual(props) {
     );
 }
 
-export {Room};
+
+// Keys allow React to keep track of elements. This way, if an item is updated or removed, only that item will be re-rendered instead of the entire list.
+// Keys need to be unique to each sibling. But they can be duplicated globally.
+// The above example with keys would look like the following: 
+
+function Room1(props) {
+   const peoples1 = [
+{id: 1, name: "Erwin"},
+{id: 1, name: "Levi"},
+{id: 1, name: "Historia"},
+{id: 1, name: "Eren"},
+{id: 1, name: "Armin"}
+   ];
+
+    return(
+        <>
+        <h1>These people are helding meeting: </h1>
+        <ul>
+            {peoples1.map((person) => <Individual1 id={person1.id} name={person1.name} />)}
+        </ul>
+        </>
+    );
+}
+
+function Individual1(props) {
+    return (
+        <>
+        <h2>{props.name}</h2>
+        </>
+    );
+}
+
+export {Room, Room1};
