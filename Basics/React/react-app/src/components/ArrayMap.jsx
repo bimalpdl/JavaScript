@@ -25,31 +25,30 @@ function Individual(props) {
 // Keys need to be unique to each sibling. But they can be duplicated globally.
 // The above example with keys would look like the following: 
 
-function Room1(props) {
-   const peoples1 = [
-{id: 1, name: "Erwin"},
-{id: 1, name: "Levi"},
-{id: 1, name: "Historia"},
-{id: 1, name: "Eren"},
-{id: 1, name: "Armin"}
-   ];
 
-    return(
-        <>
-        <h1>These people are helding meeting: </h1>
-        <ul>
-            {peoples1.map((person) => <Individual1 id={person1.id} name={person1.name} />)}
-        </ul>
-        </>
-    );
+function Garage() {
+    const cars = [
+        {id: 1, brand: "Tesla"},
+        {id: 2, brand: "BMW"},
+        {id: 3, brand: "Toyota"},
+        {id: 4, brand: "Honda"},
+        {id: 5, brand: "Audi"}  
+];
+
+return(
+    <>
+    <h1>Who is the Garage?</h1>
+
+    <ul>
+        {cars.map((car) => <Car key={car.id} brand={car.brand} />)}
+    </ul>
+    </>
+);
+}
+function Car(props) {
+    return <li>{props.brand}</li>
 }
 
-function Individual1(props) {
-    return (
-        <>
-        <h2>{props.name}</h2>
-        </>
-    );
-}
 
-export {Room, Room1};
+
+export { Room, Garage};

@@ -4,7 +4,8 @@ import ReactHook from './components/ReactHook';
 import OnClickExpression from './components/OnClickExpression';
 import PropsChild, {Entity} from './components/PropsChild';
 import {Parent, Child} from './components/StateLifting';
-import {Room, Room1} from './components/ArrayMap';
+import {Room, Garage} from './components/ArrayMap';
+import {Forms} from './components/Forms';
 
 function App() {
 	return (
@@ -26,14 +27,16 @@ function App() {
 		<>
 			<Parent />
 			<Child />
-</>
-	} />
-	<Route path="room" element={
-		<>
-		<Room />
-		<Room1 />
-		</>
-	} />
+        </>  } 
+		/>
+    <Route path="room" element={
+      <>
+	    <Room />
+	    <Garage />
+	  </>
+    }	/>
+
+	<Route path="forms" element={ <Forms /> } />
 
 		</Routes>
 		</Router>
