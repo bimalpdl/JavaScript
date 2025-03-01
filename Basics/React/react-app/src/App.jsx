@@ -6,6 +6,7 @@ import PropsChild, {Entity} from './components/PropsChild';
 import {Parent, Child} from './components/StateLifting';
 import {Room, Garage} from './components/ArrayMap';
 import {Forms} from './components/Forms';
+import StateManagement from './components/StateManagement/StateManagement';
 
 function App() {
 	return (
@@ -37,10 +38,10 @@ function App() {
     }	/>
 
 	<Route path="forms" element={ <Forms /> } />
+	<Route path="hola" element={<StateManagement />} />
 
 		</Routes>
 		</Router>
-
 	);
 }
 
