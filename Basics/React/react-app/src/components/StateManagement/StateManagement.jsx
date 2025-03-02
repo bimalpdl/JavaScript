@@ -1,20 +1,24 @@
-import Fruits from "./Fruit";
-import FruitsCounter from "./FruitsCounter";
+// TODO: the whole statemanagement component is buggy, fix it
+import Fruit from './Fruit';
 
-function StateManagement() {
+import FruitsCounter from './FruitsCounter';
+import { useState } from 'react';
+
+const StateManagement = () => {
   const [fruits] = useState([
-      {fruitName: 'apple', id: 1},
-      {fruitName: 'apple', id: 2},
-      {fruitName: 'plum', id: 3},
-  ]);
+      {id: 1, fruitName: "Apple"},
+      {id: 2, fruitName: "Apple"},
+      { id: 3, fruitName: "Banana"}
+    ]);
 
-  return (
-    <div className="App">
-      <h1>Where should the state go?</h1>
-      <Fruits fruits={fruits} />
-      <FruitsCounter fruits={fruits} />
-    </div>
-  );
+    return (
+      <div className = "App">
+        <h1>Where am I supposed to go?</h1>
+        <Fruit fruit={fruits} />
+        <FruitsCounter fruits={fruits} />
+      </div>
+    );
+
 }
 
 export default StateManagement;
