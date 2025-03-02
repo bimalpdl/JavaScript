@@ -24,5 +24,20 @@ console.log(greet2("Bimal Paudel"));   // Hello Bimal Paudel.
 // In regular functions the this keyword represented the object that called the function, which could be the window, the document, a button or whatever.
 // With arrow functions the this keyword always represents the object that defined the arrow function.
 
+/*
+ An arrow function have two return types: i) implicit return, ii) explicit return
+ In implicit return, the function body is defined inside the parenthesis () and 'return' keyword isn't used, the function implicitly returns the value.
 
+ In explicit return, the function body is defined inside the curly braces {} and 'return' statement MUST be used, if not the function returns 'undefined'
+eg: 
+let greet() => (  // function body here );  # implicit return 
+
+let greet() => {
+// function body here
+return something;     # explicit return 
+
+}
+
+
+ */
 
