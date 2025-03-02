@@ -8,6 +8,7 @@ import {Room, Garage} from './components/ArrayMap';
 import {Forms} from './components/Forms';
 import StateManagement from './components/StateManagement/StateManagement';
 import ToggelButton from './components/StateManagement/ToogleButton';
+import ToDoApp from './components/miniProjects/ToDoApp';
 
 function App() {
 	return (
@@ -39,8 +40,13 @@ function App() {
     }	/>
 
 	<Route path="forms" element={ <Forms /> } />
+
 	<Route path="hola" element={<StateManagement />} />
+
 	<Route path="toggle-button" element={<ToggelButton/>} />
+
+	<Route path="todo" element={ <ToDoApp /> } />
+
 
 
 		</Routes>
