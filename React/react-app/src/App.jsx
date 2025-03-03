@@ -4,7 +4,7 @@ import ReactHook from './components/ReactHook';
 import OnClickExpression from './components/OnClickExpression';
 import PropsChild, {Entity} from './components/PropsChild';
 import {Parent, Child} from './components/StateLifting';
-import {Room, Garage} from './components/ArrayMap';
+import {Room, Garage, UserInfo} from './components/ArrayMap';
 import {Forms} from './components/Forms';
 import StateManagement from './components/StateManagement/StateManagement';
 import ToggelButton from './components/StateManagement/ToogleButton';
@@ -38,6 +38,7 @@ function App() {
 	    <Garage />
 	  </>
     }	/>
+    <Route path="userinfo" element={<UserInfo />} />
 
 	<Route path="forms" element={ <Forms /> } />
 
@@ -46,6 +47,7 @@ function App() {
 	<Route path="toggle-button" element={<ToggelButton/>} />
 
 	<Route path="todo" element={ <ToDoApp /> } />
+	<Route path="*" element="Bad request pal, try the correct URL." />
 
 
 

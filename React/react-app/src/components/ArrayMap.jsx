@@ -49,6 +49,25 @@ function Car(props) {
     return <li>{props.brand}</li>
 }
 
+// The key is a special React prop that helps React track elements efficiently.
+// However, using index as the key is not recommended if the list is dynamic (items may be added/removed). Instead, use a unique identifier (like id).
+function UserInfo() {
+const users = [
+    {id: 101, name: "Bimal"},   // we've used id here instead of the index number for key.
+    {id: 102, name: "Rohini"},
+    {id: 103, name: "Matri"},
+    { id: 104, name: "Nirmal"}
+]
 
+return(
+<>
+<h1>arrry.map() method example</h1>
+{ users.map( user => (
+     <li key={ user.id } style={{listStyle: "square"}}>{user.id} : {user.name}</li>
+)) }
+</>
+);
 
-export { Room, Garage};
+}
+
+export { Room, Garage, UserInfo};
