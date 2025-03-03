@@ -18,4 +18,15 @@ const names = ["Bimal", "Rohini", "Nirmal", "Matrika"];
 const displayNums= names.map((name, indexNum) => {    // here, name is current element value and indexNum is an index of current element.
 // NOTE: parameter of map method (value and index)  must be passed in order i.e (value, index)
   console.log(`Index: ${indexNum} => Name: ${name}`);
+
+})
+
+const users = [
+  {id: 101, name: "Bimal"},
+  { id: 102, name: "Nirmal" },
+  { id: 103, name: "Rohini" },
+  { id: 104, name: "Matri"}
+]
+const updatedUser = users.map(user => {
+  return `id => ${user.id}, name => ${user.name}`;
 })
