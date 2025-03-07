@@ -13,12 +13,23 @@ function Square({ value, onSquareClick }) {
 
 
 export default function Board() {
+  const [xIsNext, setXIsNext] = useState(true);
   const [squares, setSquares] = useState(Array(9).fill(null));
 
   function handleClick(i) {
+    if (squares[i]) {
+      return;      // this will return if the box is already marked with either 'X' or 'O' 
+    }
     const nextSquares = squares.slice();
-    nextSquares[i] = 'X';
+    if (xIsNext) {
+      nextSquares[i] = 'X';
+    }
+    else {
+      nextSquares[i] = 'O';
+    }
     setSquares(nextSquares);
+    setXIsNext(!xIsNext);
+
   }
 
   return (
@@ -38,7 +49,7 @@ export default function Board() {
     <div className="board-row">
       <Square value={squares[6]} onSquareClick={() => handleClick(6)} />
       <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
-      <Square value={squares[8]} onSquareClick={() => handleClick(9)} />
+      <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
     </div>
 
     </>
