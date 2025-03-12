@@ -10,6 +10,7 @@ import StateManagement from './components/StateManagement/StateManagement';
 import ToggelButton from './components/StateManagement/ToogleButton';
 import ToDoApp from './components/miniProjects/ToDoApp';
 import { UseStateArray } from './components/UseStateArray';
+import { UseStateObject } from './components/StateManagement/UseStateObject';
 function App() {
 	return (
 		<Router>
@@ -50,6 +51,8 @@ function App() {
 	<Route path="*" element="Bad request pal, try the correct URL." />
 
 	<Route path="usestatearray" element={<UseStateArray />} />
+
+	<Route path="usestateobject" element={<UseStateObject />} />
 
 
 
