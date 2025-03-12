@@ -5,6 +5,7 @@ import Nav from './components/Nav';
 // import Conditional from './components/Conditional'; 
 import './App.css';
 
+
 const bool = false;
 const str1 = "Hello";
 // this is an example of functional component: 

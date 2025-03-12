@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+import { BrowserRouter, Routes, Route } from 'react-router';
+import { UseStateArray } from './components/UseStateArray';
 // import {Conditional, RandomNumber} from './components/Conditional';
 // import Styling from './components/Styling';
 // import {Arrow, Arrow1} from './components/Arrow';
@@ -12,7 +15,20 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>      {/* This is how we write comment in JSX inside curly braces and using multiline comment format */}
   
-    <App name="Bimal Paudel" />  
+  <BrowserRouter>
+    <Routes>
+
+      <Route index element={<App name="Bimal Paudel" /> } />
+      <Route path="usestatearray" element={<UseStateArray />} />
+      <Route path="*" element="Nothing's here motherfucker! Get lost." />
+
+
+
+    </Routes>
+  
+  
+  </BrowserRouter>
+     
      {/* props name="Bimal Paudel" is used here, since it is send the props this component is called parent component. 
 */}
 {/* <Conditional isMinor={false}/>  */}
