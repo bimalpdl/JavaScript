@@ -18,8 +18,7 @@ const UseStateObject = () => {
         <h1>Age: {user.age}</h1>
         <button onClick={incrementAge} >Increment Age</button>
         <button onClick={() => (decrementAge(user.age))}>Decrement Age</button>
-          
-        
+        <p>Hello</p>
         </>
     );
 }
