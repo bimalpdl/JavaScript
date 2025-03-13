@@ -1,4 +1,3 @@
-// TODO tasks and pending tasks are buggy, fix it.
 // filter() – Remove Elements Based on a Condition.
 // The filter() method creates a new array containing only the elements that satisfy a condition.
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
@@ -12,12 +11,14 @@ console.log(`Reduced array (contains only even numbers): ${evenNums}`);
  Returns a new array containing only elements that pass the condition.
  */ 
 const tasks = [
-  { id: 101, tsk : "Learn React", completed: true },
-  { id: 102, tsk : "Practice React / JS", completed: true },
-  { id: 103, tsk : "Improve Everyday", completed: true},
-  { id: 104, tsk : "Sleep well", completed: false},
-  { id: 105, tsk : "Enjoy your life", completed: false}
-]
+  { id: 101, task : "Learn React", completed: true },
+  { id: 102, task : "Practice React / JS", completed: true },
+  { id: 103, task : "Improve Everyday", completed: true},
+  { id: 104, task : "Sleep well", completed: false},
+  { id: 105, task : "Enjoy your life", completed: false}
+];
+
+tasks.map( tsk => console.log(`ID: ${tsk.id}, Task: ${tsk.task}, Complete status: ${tsk.completed}`));  // loop through an object defined inside an array.
 
 const pendingTasks = tasks.filter(task => !task.completed);
-console.log(`Pending tasks to do: ${pendingTasks}`);
+pendingTasks.map( tsk => console.log(`Pending tasks: ${tsk.task}`));
