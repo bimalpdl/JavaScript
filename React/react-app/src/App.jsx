@@ -11,6 +11,7 @@ import ToggelButton from './components/StateManagement/ToogleButton';
 import ToDoApp from './components/miniProjects/ToDoApp';
 import { UseStateArray } from './components/UseStateArray';
 import { UseStateObject } from './components/StateManagement/UseStateObject';
+import { MultiFieldForms } from './components/MultiFieldForms';
 function App() {
 	return (
 		<Router>
@@ -54,7 +55,7 @@ function App() {
 
 	<Route path="usestateobject" element={<UseStateObject />} />
 
-
+    <Route path="multifieldform" element={<MultiFieldForms />} />
 
 		</Routes>
 		</Router>
