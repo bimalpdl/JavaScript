@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import Header from './components/Header';
-import MainContent from './components/MainContent';
-import Footer from './components/Footer'; 
+import Navbar from './components/Navbar';
+import Main from './components/Main';
+// import Footer from './components/Footer'; 
 import './App.css'
 
 function App() {
@@ -9,13 +9,13 @@ function App() {
 
   return (
     <>
-    <Header />
-    <MainContent />
-    <Footer />
+    <Navbar />
+    <Main />
+    {/* <Footer /> */}
     </>
   )  
 }
 
 
 
-export default App
+export default App;

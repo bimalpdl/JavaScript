@@ -1,8 +1,7 @@
-export default function Footer() {
-    return (
-        <footer className='footer'>
-            <p>© 2024 Paudel development. All rights reserved.</p>
-        </footer>
-    )
-  }
-  
+const Footer = () => (
+    <>
+      <h1>Hello, I am footer of this page!!</h1>
+    </>
+);
+
+export default Footer;
