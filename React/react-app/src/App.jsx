@@ -13,6 +13,7 @@ import { UseStateArray } from './components/UseStateArray';
 import { UseStateObject } from './components/StateManagement/UseStateObject';
 import { MultiFieldForms } from './components/MultiFieldForms';
 import Search from './components/Search';
+import Formvalidation from './components/Formvalidation';
 function App() {
   return (
     <Router>
@@ -59,7 +60,8 @@ function App() {
     <Route path="multifieldform" element={<MultiFieldForms />} />
 
     <Route path="formsearch" element={<Search /> } />
-
+    
+    <Route path="formvalidation" element={ <Formvalidation /> } />
     </Routes>
     </Router>
   );
