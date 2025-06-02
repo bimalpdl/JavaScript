@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.topNav  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+    
+}
+
+.firstContainer {
+    margin-left: 15px;
+    /* font-size: smaller; */
+    color: maroon;
+    
+
+}
+
+.secondContainer {
+    display: flex;
+    padding: 0 35px;
+
+}
+
+.secondContainer > li {
+    list-style: none;
+}
+.secondContainer > li > a {
+    padding: 0 15px;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+.secondContainer > li > a > img {
+    height: 25px;
+    width: 25px;
+}
+.customerLogin{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

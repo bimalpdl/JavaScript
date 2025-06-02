@@ -1,0 +1,26 @@
+.container{ 
+    border: 3px solid gray;
+    padding: 5px;
+    width: 50%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 auto;
+    margin: 10px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.firstChild > p {
+    font-size: larger;
+    color: Green;
+
+}
+
+.secondChild > p {
+    font-size: large;
+    color: lightcoral;
+}

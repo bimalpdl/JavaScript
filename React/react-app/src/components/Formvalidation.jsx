@@ -11,7 +11,6 @@ const Formvalidation = () => {
 
         if (!name || !age || !sex || !email) {
             alert("Empty fields are not allowed" );
-            console.log(formData);
             return;
         }
 
