@@ -15,7 +15,7 @@ users.forEach(user => {
 
 let updatedUsers = users.map( (user, index) => {
   return {
-    ...user,   // note here, to avoid modifying the original 'users' array, we've used spread operator, it copies the existing properties and only updates the that are explicitly modified. In this case it only updates user.id and user.rollNum.
+    ...user,   // note here, to avoid modifying the original 'users' array, we've used spread operator, it copies the existing properties and only updates that are explicitly modified. In this case it only updates user.id and user.rollNum.
     id: user.id + 5,
     rollNum: user.rollNum + 2
   };
