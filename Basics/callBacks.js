@@ -18,7 +18,7 @@ displayResult(result);   // printing the value using displayResult() function.
 
 function add(num1, num2) {
   let result = num1 + num2;
-  displayResult(result);     // invoking another function form one function body;
+  displayResult(result);     // invoking another function from one function body;
 }
 
 let firstNum = prompt("Enter Afirst number: ");
